@@ -4,9 +4,12 @@
 
 Код находится в ветке dev.
 
-Я занималась разработкой: 
+Я занималась разработкой:
+
 1.интерактивной карты covid-dashboard/covid-dashboard/src/app/modules/map/map.js
+
 2.графика covid-dashboard/covid-dashboard/src/app/modules/graph/graph.js
+
 3.онлайн теста covid-dashboard/covid-dashboard/src/app/modules/online-test/onlineTest.js
 
 Карта отображает статистику заболеваний по миру
