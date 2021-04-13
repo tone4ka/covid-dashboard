@@ -1,0 +1,140 @@
+// List Select Form
+
+.__select 
+  position: relative
+  height: 40px
+  z-index: 9999
+
+  &[data-state="active"] 
+    .__select__title 
+      &::before
+        transform: translate(-3px, -50%) rotate(-45deg)
+      
+
+      &::after 
+        transform: translate(3px, -50%) rotate(45deg)
+
+    .__select__content 
+      opacity: 1
+    
+    
+    .__select__label + .__select__input + .__select__label 
+      max-height: 40px
+.select--double
+  width: 160px
+
+.__select__title 
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+  padding: 8px 16px
+
+  background-color: $color-primary-dark
+  +font-family-secondary
+  font-size: 16px
+  color: $color-text-light
+  
+  cursor: pointer
+
+  &::before,
+  &::after 
+    content: ""
+
+    position: absolute
+    top: 50%
+    right: 16px
+
+    display: block
+    width: 10px
+    height: 2px
+
+    transition: all 0.3s ease-out
+
+    background-color: $color-text-light
+
+    transform: translate(-3px, -50%) rotate(45deg)
+  
+  &::after 
+    transform: translate(3px, -50%) rotate(-45deg)
+
+    &::before,
+    &::after 
+      background-color: $color-text-light-hover
+
+  &--secondary
+    background-color: $color-secondary-dark
+  
+
+.__select__content 
+  position: absolute
+  top: 40px
+
+  display: flex
+  flex-direction: column
+  width: 100%
+
+  background-color: $color-primary
+  
+  transition: all 0.3s ease-out
+
+  opacity: 0
+  z-index: 8
+  &--secondary
+    background-color: $color-secondary
+
+.__select__input 
+  display: none
+
+  &:checked + label 
+    background-color: $color-primary-dark
+  
+  &:disabled + label 
+    opacity: 0.6
+    pointer-events: none
+  &--secondary
+    &:checked + label 
+      background-color: $color-secondary-dark
+  
+
+.__select__label 
+  display: flex
+  align-items: center
+  width: 100%
+  height: 40px
+  max-height: 0
+  padding: 0 16px
+  +font-family-secondary
+  font-size: 16px
+  color: $color-text-light
+  transition: all 0.3s ease-out
+
+  cursor: pointer
+  
+  overflow: hidden
+  
+
+  &:hover 
+    background-color: $color-primary-dark
+
+    color: #ffffff
+  &--secondary
+    &:hover
+      background-color: $color-secondary-dark
+
+@media (max-width: $media-desktop-small)
+  .__select
+    hight: 35px
+  .select--double
+    width: 120px
+
+@media (max-width: $media-mobile-medium)
+  .__select
+    hight: 30px
+    &__title,
+    &__label
+      font-size: 14px
+  .select--double
+    width: 110px
+    height: 30px
+

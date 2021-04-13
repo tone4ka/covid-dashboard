@@ -1,0 +1,91 @@
+.mapSheet
+  width: 100%
+  height: calc(95vh - 170px - 190px)
+
+.map.fullscreen .mapSheet
+  height: calc(95vh - 170px)
+  
+.icon-marker
+  display: flex
+  position: relative
+  justify-content: center
+  align-items: center
+  color: white
+  // width: 3.6em
+  // height: 3.6em
+  font-size: .7em
+  font-weight: bold
+  background-color: $color-secondary
+  border-radius: 100%
+  box-shadow: 0 2px 5px rgba(black, .9)
+
+  .opacity
+    opacity: 0
+  .icon-marker-tooltip 
+    display: none
+    position: absolute
+    bottom: 100%
+    min-width: 200px
+    min-height: 57px
+    font-size: 16px
+    padding: 7px
+    background-color: rgba(255, 255, 255, 0.9)
+    border-radius: 10px
+    box-shadow: 0px 0px 15px 7px rgba(77, 76, 172, 0.1)
+
+    &:before 
+      display: block
+      position: absolute
+      bottom: -.6em
+      left: 50%
+      content: ''
+      width: 1.4em
+      height: 1.4em
+      transform: rotate(45deg)
+      margin-left: -.7em
+
+    h2 
+      font-family: $font-family-primary
+      font-weight: 700
+      font-size: 18px
+      line-height: 22px
+      margin-bottom: 2px
+      color: $color-text-dark
+      text-align: center
+
+    h3 
+      font-size: 1.2em
+      margin: .1em 0
+      font-weight: normal
+      color: rgba(126, 160, 168, 0.753)
+
+    ul,
+    p 
+      font-family: $font-family-secondary
+      font-weight: normal
+      color: $color-text-dark
+      text-align: center
+
+    ul 
+      list-style: none
+      padding: 0
+      margin: .6em 0 0
+    
+.icon-marker:hover .icon-marker-tooltip 
+  display: block  
+
+
+@media (max-height: $media-small-height)
+  .mapSheet
+    height: 679px
+  
+
+    
+  
+    
+    
+  
+    
+    
+  
+  

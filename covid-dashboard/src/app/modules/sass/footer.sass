@@ -1,0 +1,42 @@
+.footer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: 20px 0
+  +section-padding
+  height: 50px 
+  width: 100%
+  background-color: $color-light-bg
+  +section-border-raduis
+
+  &__inner
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__course-link
+    margin: 0 10px
+    +transition-primary
+    &:hover
+      opacity: 0.7
+
+  &__authors-link
+    margin:  0 5px
+    font-family: $font-family-secondary
+    font-size: 14px
+    color: $color-text-dark
+    +transition-primary
+    &:hover
+      opacity: 0.5
+    &:visited,
+    &:active
+      color: $color-text-dark
+
+@media (max-width: $media-mobile-large)
+  .footer
+    height: auto
+    &__inner
+      flex-direction: column
+    &__authors-info
+      margin-top: 10px

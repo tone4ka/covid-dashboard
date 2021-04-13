@@ -1,0 +1,45 @@
+.map
+  +section-padding
+  width: 100%
+  height: calc(95vh - 190px)
+  background-color: $color-light-bg
+  +section-border-raduis
+  &-header
+    display: flex
+    justify-content: center
+    margin: 20px 0
+    &__controls
+      display: flex
+      justify-content: center
+      position: relative
+      width: 100%
+
+  &-inner
+    margin: 40px 0 20px
+    height: calc(95vh - 190px - 200px)
+    overflow-y: scroll
+    &::-webkit-scrollbar
+      display: none
+
+.map.fullscreen .map-inner
+  height: calc(95vh - 200px)
+
+@media (max-height: $media-small-height)
+    .map
+      height: auto
+      &-inner
+        height: 652px
+
+@media (max-width: $media-mobile-large)
+  .map
+    height: auto
+    &-header
+      margin-bottom: 0
+      &__controls
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        margin-bottom: 10px
+    &-inner
+      margin-top: 0
+      height: 400px

@@ -1,0 +1,37 @@
+.search 
+  position: relative
+  margin: 15px 0
+  &__inner
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &__input-wrap
+      position: relative
+      width: 90%
+  &__keyboard-toggle
+      font-size: 18px
+      color: $color-text-dark
+      margin-left: 5px
+      cursor: pointer
+      +transition-primary
+      &:hover
+          opacity: 50%
+  input
+      padding: 10px 50px 10px 22px
+      width: 100%
+      border-radius: 30px
+      background-color: $color-medium-bg
+      +font-family-secondary
+      font-size: 14px
+      color: $color-text-dark
+      &::placeholder
+          color: $color-text-dark
+          opacity: 50%
+  &-icon
+      position: absolute
+      right: 22px
+      top: 50%
+      transform: translateY(-50%)
+      font-size: 18px
+      opacity: 50%
+      cursor: pointer

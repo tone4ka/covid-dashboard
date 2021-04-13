@@ -1,0 +1,31 @@
+// global cases
+.global-cases
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    +section-padding
+    width: 100%
+    min-height: 130px
+    background-color: $color-secondary
+    +section-border-raduis
+    text-align: center
+    color: $color-text-light
+
+    &__title
+        color: $color-text-light
+
+    &__text
+        font-size: 42px
+        margin-top: 9px
+
+.global-cases.fullscreen 
+    h2
+        font-size: 42px
+    .global-cases__text
+        font-size: 56px
+
+@media (max-width: $media-desktop-small)
+    .global-cases
+        &__text
+            font-size: 32px

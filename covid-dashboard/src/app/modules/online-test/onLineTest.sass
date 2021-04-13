@@ -1,0 +1,90 @@
+.onlineTest
+	position: absolute
+	top: 30px
+	left: 50%
+	transform: translateX(-50%)
+	z-index: 14000
+
+.formBox
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	padding: 40px 25px
+	background-color: $color-light-bg
+	box-shadow: 0px 0px 15px 7px rgba(77, 76, 172, 0.1)
+	+section-border-raduis
+.test-title
+	margin: 0 auto
+	font-size: 24px
+	line-height: 26px
+	text-align: center
+	margin-bottom: 20px
+	text-transform: uppercase
+	color: $color-text-dark
+	width: 75%
+	text-align: center
+
+.questionForm
+	display: flex
+	height: 500px
+	justify-content: center
+	align-items: center
+
+.controlPan
+	display: flex
+	justify-content: center
+	margin: 30px 0 20pxъ
+
+.test
+	margin-right: 5px
+
+.ready,
+.сlose
+	font-size: 18px
+	cursor: pointer
+	padding: 10px 25px
+	margin: 5px
+	min-width: 140px
+	max-width: 280px
+	color: $color-text-light
+	+transition-primary
+		
+.close-res
+	display: block
+	margin: 0 auto
+
+.ready
+	background-color: $color-primary
+	&:hover
+		background-color: $color-primary-dark
+.сlose
+	background-color: $color-secondary
+	&:hover
+		background-color: $color-secondary-dark
+
+.question-wrap
+	width: 75%
+	margin: 10px auto
+	font-size: 20px
+	line-height: 23px
+	text-transform: capitalize
+	color: $color-text-dark
+
+.res
+	margin: 0 auto
+	width: 75%
+	font-size: 26px
+	text-align: center
+	min-height: 200px
+
+@media (max-width: $media-mobile-medium)
+	.formBox
+		width: 280px
+		padding: 30px 10px
+
+	.controlPan
+		flex-direction: column
+	
+
+	
+

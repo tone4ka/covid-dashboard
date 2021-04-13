@@ -1,0 +1,91 @@
+.table
+  +section-padding
+  width: 100%
+  height: calc((95vh - 120px) / 2 + 30px)
+  background-color: $color-light-bg
+  +section-border-raduis
+  &__search
+    width: 270px
+    margin: 0 auto
+    margin-top: 25px
+  &__controls
+    display: flex
+    justify-content: center
+    margin-top: 20px
+
+  &__select-timing
+    margin: 0 10px
+    width: 160px
+
+  &__select-count
+    margin: 0 10px
+    width: 160px
+    &-title
+      background-color: $color-secondary-dark
+  &__select__content
+    background-color: $color-secondary
+  &__select__input
+    &:checked + label 
+      background-color: $color-secondary-dark
+  &__select__label
+    &:hover
+      background-color: $color-secondary-dark
+
+.table-container
+  margin-top: 20px
+  height: calc((95vh - 100px) / 2 - 220px + 80px)
+  overflow-y: scroll
+
+.table-data
+  width: 100%
+  border-collapse: collapse
+
+  &__head
+    +font-family-primary
+    font-size: 18px
+    color: $color-text-dark
+    text-align: left
+    font-weight: 700
+
+    &-item
+      padding: 7px 5px
+
+  &__body
+    +font-family-secondary
+    font-size: 16px
+    color: $color-text-dark
+
+    tr
+      +transition-primary
+      &:hover
+        background-color: $color-medium-bg
+
+    &-col
+      padding: 6px 5px
+      border-bottom: 1px solid $color-bottom-border
+      cursor: pointer
+
+.--country
+  color: $color-additional
+
+.table.fullscreen .table-container
+  height: calc(95vh - 200px)
+
+@media (max-width: $media-desktop-small)
+  .table-data
+    &__head
+      font-size: 16px
+
+@media (max-height: $media-small-height)
+   .table
+      height: auto
+      &-container
+          height: 370px
+
+@media (max-width: $media-tablet-large)
+  .table
+    height: auto
+    &-container
+      height: 440px
+
+  

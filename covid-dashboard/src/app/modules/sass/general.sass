@@ -1,0 +1,45 @@
+// General
+
+body
+    background-color: $color-medium-bg
+    padding: 18px 20px
+
+h1
+    +font-family-primary
+    font-size: 52px
+    text-transform: uppercase
+    color: $color-secondary
+
+h2
+    +font-family-primary
+    font-size: 28px
+    color: $color-text-dark
+    text-align: center
+
+.container
+    max-width: 99.5%
+    min-height: 96vh
+    margin: 0 auto
+
+.block-scroll
+    overflow: hidden
+
+@media (max-width: $media-desktop-small)
+    h1
+        font-size: 42px
+    h2
+        font-size: 26px
+
+@media (max-height: $media-small-height)
+    .container
+        height: auto
+
+@media (max-width: $media-tablet-large)
+    h1
+        font-size: 32px
+
+@media (max-width: $media-mobile-large)
+    body
+        padding: 10px
+    h1
+        font-size: 28px

@@ -1,0 +1,213 @@
+a:focus, a:active 
+    outline: none
+
+nav,  footer,  header,  aside
+    display: block
+
+input, button, textarea
+    font-family: inherit
+
+input::-ms-clear
+    display: none
+
+button
+    cursor: pointer
+
+button::-moz-focus-inner
+    padding: 0
+    border: 0
+
+a, a:visited
+    text-decoration: none
+
+a:hover
+    text-decoration: none
+
+ul li
+    list-style: none
+
+img
+    vertical-align: top
+
+
+
+// STYLE 
+html, body
+    font-size: 10px
+
+$keyboard-bg-color: #00c3b3
+$keyboard-bg-color2: rgb(0, 137, 150)
+$keyboard-bg-color3: #004134
+
+
+.keyboard__input
+    display: block
+    width: calc(100vw - 20rem)
+    height: calc(100vh/2)
+    margin: 0 auto
+    padding: 1rem
+    box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.2)
+    min-height: 10rem
+    &:focus, &:active 
+        outline: none
+    @media screen and ( max-width:  768px)
+        width: calc(100vw - 2rem)
+        height: calc(100vh/3)
+
+    
+.keyboard
+    width: 100vw
+    //min-height: 20rem
+    padding: 5px 0
+    background: $keyboard-bg-color3
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5)
+    margin-top: 1rem
+    justify-content: center
+    display: flex
+    flex-direction: column
+    position: fixed
+    left: 0
+    bottom: 0
+    user-select: none
+    transition: bottom 0.6s
+    z-index: 10001
+    &-hidden
+        bottom: -100%
+    &__key
+        height: 4.5rem
+        width: 6%
+        max-width: 9rem
+        margin: 0.3rem
+        border-radius: 0.4rem
+        border: none
+        background: rgba(255, 255, 255, 0.2)
+        color: #ffffff
+        font-size: 1.6rem
+        outline: none
+        cursor: pointer
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        vertical-align: top
+        padding: 0
+        position: relative
+        box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2)
+        &-wide
+            width: 12%
+        &-extra-wide
+            width: 36%
+            max-width: 500px
+        &--dark
+            background: rgba(0, 0, 0, 0.25)
+        &--activatable
+            &::after
+                content: ''
+                top: 1rem
+                right: 1rem
+                position: absolute
+                width: 0.8rem
+                height: 0.8rem
+                background: rgba(0, 0, 0, 0.4)
+                border-radius: 50%
+                @media screen and ( max-width:  768px)
+                    top: 0.2rem
+                    right: 0.2rem
+
+        &--active
+            background: rgba(255, 255, 255, 0.12)
+            &::after
+                background: #08ff00
+        .spec
+            color: gray
+            font-size: 2rem    
+            transition: all 0.4s ease-in-out
+            @media screen and ( max-width:  768px)
+                font-size: 1.4rem    
+        .letter
+            font-size: 2rem
+            transition: all 0.4s ease-in-out
+            @media screen and ( max-width:  768px)
+                font-size: 1.4rem    
+  
+    &__row
+        display: flex
+        justify-content: center
+
+.spec:not(empty)
+    margin-right: 50%
+
+
+
+.spec-active:not(empty)
+    margin-right: 0
+.keyboard__key .spec-active
+    color: #d3ff00
+    font-size: 2.5rem    
+    @media screen and ( max-width:  768px)
+        font-size: 1.8rem    
+
+.spec:not(empty) + .letter-spec-active
+    margin-left: 50%
+    font-size: 2rem    
+    @media screen and ( max-width:  768px)
+        font-size: 1.4rem    
+    color: gray
+
+.spec-active:empty + .letter-spec-active
+    margin-left: 0
+
+
+.keyboard__key:hover,
+.keyboard__key--active 
+  cursor: pointer
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2)
+  transform: translateY(3px)
+  transition: all 0.1s ease-in-out
+  
+.keyboard__key--active 
+    background: rgba(211, 255, 0, 0.12)
+
+[data-code="Space"]
+    width: 36%
+    max-width: 500px
+
+[data-code="Delete"],[data-code="Backspace"],[data-code="Enter"],[data-code="ShiftLeft"],[data-code="CapsLock"]
+    min-width: 3.6rem
+
+[data-code="Sound"],[data-code="Voice"],[data-code="Hide"],[data-code="Lang"]
+    min-width: 2.6rem
+
+
+.material-icons.md-dark
+    color: rgba(0, 0, 0, 0.54)
+.material-icons.md-dark.md-inactive
+    color: rgba(0, 0, 0, 0.26)
+.material-icons.md-light
+    color: rgba(255, 255, 255, 1)
+.material-icons.md-light.md-inactive
+    color: rgba(255, 255, 255, 0.3)
+
+
+.popup
+    position: fixed
+    top: -30rem
+    background: rgba(0,0,0,0.4)
+    color: white
+    font-size: 2rem
+    width: 100vw
+    transition: all 0.9s
+    z-index: 5
+    &__wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding: 0 2rem
+    &-visilbe
+        top: 0px
+        left: 0
+        //height: 85px
+        position: fixed
+    &__close
+        cursor: pointer

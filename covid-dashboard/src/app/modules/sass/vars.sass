@@ -1,0 +1,75 @@
+$color-light-bg: #ffffff
+$color-medium-bg: #EDEFF3
+$color-dark-3xl: #292929
+
+$color-primary: #4D4CAC
+$color-primary-dark: #3C3B97
+$color-secondary: #FF808B
+$color-secondary-dark: #E0626D
+$color-additional: #23BEE2
+
+$color-text-light: #fff
+$color-text-light-hover: #dcdcdc
+$color-text-dark: #3A3F65
+
+$color-bottom-border: #DEE1F2
+
+$font-family-primary: 'Lato', sans-serif
+$font-family-secondary: 'Montserrat', sans-serif
+
+$media-desktop-medium: 1440px
+$media-desktop-small: 1279px
+
+$media-tablet-large: 1023px
+
+$media-mobile-large: 767px
+$media-mobile-medium: 500px
+
+$media-medium-height: 1079px
+$media-small-height: 767px
+
+=font-family-primary
+    font-family: 'Lato', sans-serif
+
+=font-family-secondary
+    font-family: 'Montserrat', sans-serif
+
+=section-border-raduis
+    border-radius: 10px
+
+=transition-primary
+    transition: 0.5s linear
+
+=section-padding
+    padding: 15px 15px
+
+
+=flex
+    display: flex
+
+=flex-direction($direction) 
+    +flex
+    flex-direction: $direction
+
+=flex-justify($justify-content) 
+    +flex
+    justify-content: $justify-content
+
+=flex-algin-justify($align-items, $justify-content) 
+    +flex
+    align-items: $align-items
+    justify-content: $justify-content
+
+=flex-direction-justify($direction, $justify-content) 
+    +flex
+    flex-direction: $direction
+    justify-content: $justify-content
+
+=flex-direction-algin-justify($direction, $align-items, $justify-content) 
+    +flex-direction-justify($direction, $justify-content) 
+    align-items: $align-items
+
+=flex-direction-algin($direction, $align-items)    
+    +flex-direction($direction) 
+    align-items: $align-items
+

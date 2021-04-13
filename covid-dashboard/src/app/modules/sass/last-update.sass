@@ -1,0 +1,32 @@
+// Last update
+
+.last-update
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  +section-padding
+  width: 100%
+  min-height: 130px
+  margin: 20px 0
+  background-color: $color-light-bg
+  +section-border-raduis
+  &__date
+    margin-top: 10px
+    +font-family-primary
+    font-size: 28px
+    text-align: center
+    color: $color-secondary
+    span
+      display: block
+
+.last-update.fullscreen 
+    h2
+        font-size: 42px
+    .last-update__date
+        font-size: 36px
+
+@media (max-width: $media-desktop-medium)
+  .last-update
+    &__date
+      font-size: 22px
